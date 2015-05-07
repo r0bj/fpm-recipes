@@ -1,0 +1,41 @@
+# Upstart job to start the zabbix server
+
+description "Zabbix server"
+author "Christian Kampka <chris@emerge-life.de>"
+
+start on (filesystem and net-device-up IFACE=lo)
+stop on runlevel [!2345]
+
+expect daemon
+
+respawn
+
+# wait for server to properly disconnect from connected nodes
+kill timeout 30
+
+console log
+
+env DIR="/var/run/zabbix"
+
+pre-start script
+
+  # stop job from continuing if no config file found for daemon
+  [ ! -f /etc/default/zabbix-server ] && { stop; exit 0; }
+
+  # source the config file
+  . /etc/default/zabbix-server
+
+  # stop job from continuing if admin has not enabled service in
+  # config file.
+  [ "x$START" = "xyes" ] || { stop; exit 0; }
+
+  [ -d "$DIR" ] || mkdir "$DIR"
+  chown -R zabbix:zabbix "$DIR"
+
+end script
+
+script
+  . /etc/default/zabbix-server
+
+  exec /usr/sbin/zabbix_server -c $CONFIG_FILE
+end script
