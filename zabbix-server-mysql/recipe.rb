@@ -93,7 +93,7 @@ class ZabbixServerMysql < FPM::Cookery::Recipe
 		share('zabbix-server-mysql').install 'database/mysql/data.sql'
 		share('zabbix-server-mysql').install 'database/mysql/images.sql'
 		share('zabbix-server-mysql').install 'database/mysql/schema.sql'
-		share('zabbix-server-mysql').install 'conf/zabbix_server.conf'
+		share('zabbix-server-mysql').install workdir('zabbix_server.conf')
 
 		safesystem 'gzip', share('zabbix-server-mysql/data.sql')
 		safesystem 'gzip', share('zabbix-server-mysql/images.sql')
