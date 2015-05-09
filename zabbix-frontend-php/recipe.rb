@@ -4,7 +4,7 @@ class ZabbixFrontendPhp < FPM::Cookery::Recipe
 	md5 'a82eb0d55d3ca947e10a4a55238f4388'
 
 	name 'zabbix-frontend-php'
-	version '2.4.5'
+	version '1:2.4.5'
 	revision '1'
 
 	description 'network monitoring solution - PHP front-end
