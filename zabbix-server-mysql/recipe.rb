@@ -40,7 +40,7 @@ class ZabbixServerMysql < FPM::Cookery::Recipe
 
 	depends	'libc6 (>= 2.17)',
 			'libcurl3-gnutls (>= 7.16.2)',
-			'libiksemel3',
+			'libiksemel3 (>= 1.2)',
 			'libldap-2.4-2 (>= 2.4.7)',
 			'libmysqlclient18 (>= 5.5.13-1)',
 			'libodbc1 (>= 2.2.11) | unixodbc (>= 2.2.11)',
