@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    purge)
+        # Can be removed after Wheezy:
+        ucf --purge /etc/zabbix/dbconfig.php || true
+
+        # Remove config files created by the Zabbix setup wizard
+        rm -f /etc/zabbix/zabbix.conf.php
+    ;;
+esac
+
+
