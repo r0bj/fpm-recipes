@@ -1,10 +1,10 @@
 class ZabbixFrontendPhp < FPM::Cookery::Recipe
 	homepage 'http://www.zabbix.com'
-	source 'http://freefr.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/2.4.7/zabbix-2.4.7.tar.gz'
-	md5 '9f8aeb11d8415585f41c3f2f22566b78'
+	source 'http://skylink.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Development/3.0.0beta1/zabbix-3.0.0beta1.tar.gz'
+	md5 '979370195fbb967c0e80889f62c25fc7'
 
 	name 'zabbix-frontend-php'
-	version '1:2.4.7'
+	version '1:3.0b1'
 	revision '1'
 
 	description 'network monitoring solution - PHP front-end
