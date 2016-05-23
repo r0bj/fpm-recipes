@@ -1,0 +1,15 @@
+[Unit]
+Description=Zabbix Server (MySQL/MariaDB)
+Documentation=man:zabbix_server
+After=network.target mysql.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/zabbix_server
+ExecReload=/usr/sbin/zabbix_server -R config_cache_reload
+GuessMainPID=no
+#PIDFile=/var/run/zabbix/zabbix_server.pid
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
