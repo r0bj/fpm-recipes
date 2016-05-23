@@ -23,13 +23,13 @@ class ZabbixFrontendPhp < FPM::Cookery::Recipe
 
 	post_uninstall 'postrm'
 
-	depends 'libjs-jquery-ui (>= 1.10.1+dfsg)',
+	depends 'libjs-jquery (>= 1.11.3+dfsg)',
+		'libjs-jquery-ui (>= 1.10.1+dfsg)',
 		'libjs-prototype (>= 1.7.1)',
 		'ucf',
-		'apache2 | httpd',
-		'php5',
-		'php5-gd',
-		'php5-pgsql | php5-mysql | php5-sqlite',
+		'php',
+		'php-gd',
+		'php-pgsql | php-mysql | php-sqlite3',
 		'ttf-dejavu-core'
 
 	section 'net'
