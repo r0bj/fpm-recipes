@@ -1,10 +1,10 @@
 class ZabbixServerMysql < FPM::Cookery::Recipe
 	homepage 'http://www.zabbix.com'
-	source 'http://vorboss.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/3.0.4/zabbix-3.0.4.tar.gz'
-	md5 'a164b27ef80221429fc9a39eab0b7b9c'
+	source 'http://heanet.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/3.2.0/zabbix-3.2.0.tar.gz'
+	md5 'e2491b482868059f251902d5f636eacb'
 
 	name 'zabbix-server-mysql'
-	version '1:3.0.4'
+	version '1:3.2.0'
 	revision '1'
 
 	description 'network monitoring solution - server (using MySQL)
