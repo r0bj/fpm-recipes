@@ -1,10 +1,10 @@
 class Netatalk < FPM::Cookery::Recipe
 	homepage 'http://netatalk.sourceforge.net'
-	source 'http://skylink.dl.sourceforge.net/project/netatalk/netatalk/3.1.8/netatalk-3.1.8.tar.bz2'
-	md5 '9cab934ca32b8979f389da52d44c69c2'
+	source 'http://heanet.dl.sourceforge.net/project/netatalk/netatalk/3.1.10/netatalk-3.1.10.tar.bz2'
+	md5 '335a23f0df707400caa9b68b08be5e56'
 
 	name 'netatalk'
-	version '3.1.8'
+	version '3.1.10'
 	revision '2'
 
 	description "AppleTalk user binaries
@@ -19,7 +19,7 @@ class Netatalk < FPM::Cookery::Recipe
 	depends	'libevent-2.0-5',
 		'libavahi-client3',
 		'libtdb1',
-		'libmysqlclient18',
+		'libmysqlclient20',
 		'libtracker-sparql-1.0-0'
 
 	build_depends 'libevent-dev',
